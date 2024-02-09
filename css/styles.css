@@ -118,8 +118,39 @@
   position: relative; /* Permite posicionar el div hijo */
 }
 
+.progress-wrapper {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
 
+path {
+  stroke-linecap: round;
+  stroke-width: 6;
+}
 
+.grey {
+  stroke: #e5e5e5;
+}
 
+.red {
+  stroke: #FC8F33;
+  stroke-dasharray: 248;
+  stroke-dashoffset: 248; /* Inicialmente, el offset es igual a la longitud de la barra */
+  animation: fillAnimation 2s ease forwards; /* Animación para llenar la barra */
+}
 
+@keyframes fillAnimation {
+  0% {
+    stroke-dashoffset: 248; /* El offset es igual a la longitud de la barra */
+  }
+  100% {
+    stroke-dashoffset: 0; /* El offset es cero, la barra está completamente llena */
+  }
+}
+
+/* Agrega las clases .red-02, .red-03, etc., como lo hiciste en tu CSS */
 
