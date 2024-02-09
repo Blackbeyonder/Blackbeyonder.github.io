@@ -67,15 +67,24 @@
       </div>
 
       <div class="progress-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="37 -5 120 100" width="100%" height="100%">
-            <path class="grey" d="M55,90
-                     A55,55 0 1,1 140,90"
-                  style="fill:none;"/>
-            <path class="red" d="M55,90
-                     A55,55 0 1,1 140,90"
-                  style="fill:none;"/>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="37 -5 120 100" width="100%" height="100%" style="overflow: visible;">
+          <!-- Trayectoria gris base -->
+          <path class="grey" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
+      
+          <!-- Marcador de inicio (0%) -->
+          <text x="35" y="90" dx="5" dy="5" font-family="Arial" font-size="12" fill="grey">0</text>
+      
+          <!-- Trayectoria de progreso -->
+          <path class="red" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
+      
+          <!-- Marcador de fin (100%) -->
+          <text x="152" y="90" dx="-5" dy="5" font-family="Arial" font-size="12" fill="grey">100</text>
         </svg>
       </div>
+      
+      
+      
+      
      
 
       
