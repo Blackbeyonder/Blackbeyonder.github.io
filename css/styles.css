@@ -84,20 +84,7 @@
   transform: skewX(-15deg); /* Rotar el pseudo-elemento hacia la izquierda */
 }
 
-
-  
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* Hace que el div sea un círculo */
-  background-color: #f0f0f0; /* Color de fondo del círculo */
-  border: 5px solid #d80909; /* Contorno del círculo */
-  position: absolute; /* Cambiamos a posicion absoluta */
-  top: 50%; /* Lo posicionamos en el 50% desde arriba */
-  left: 50%; /* Lo posicionamos en el 50% desde la izquierda */
-  transform: translate(-50%, -50%); /* Movemos el centro del círculo a su posición correcta */
-}
-
+/* ---------------------------------------------------------- */
 .circle {
   width: 200px;
   height: 200px;
@@ -119,11 +106,14 @@
 }
 
 .progress-wrapper {
-  height: 300px;
-  width: 300px;
+  height: 355px;
+  width: 355px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: absolute;
+  top: -83px;
+  left: -47px;
   
 }
 
