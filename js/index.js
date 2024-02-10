@@ -4,7 +4,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Llamar a la función setPercentage después de que se cargue el DOM
     console.log("dom1");
-
     /* Redirect to first div BEGIN */
      // Obtener el primer div
     const primerDiv = document.getElementById('inicio');
@@ -24,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Modifica el texto del elemento
         loadingText.setAttribute('x', '92');
         loadingText.textContent = 'Listo';
+
+        const container = document.querySelector('.container-diagonal');
+        container.classList.add('remove-diagonal'); // Agregar la clase para iniciar la animación
+    
 
       });
 

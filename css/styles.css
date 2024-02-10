@@ -100,8 +100,28 @@ z-index: 10000;
   background-color: rgb(9, 33, 46); /* Color de la división */
   transform-origin: top left;
   transform: skewX(-15deg); /* Rotar el pseudo-elemento hacia la izquierda */
+  transition: height 0.5s ease; 
 }
 
+
+
+/* .container-diagonal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 55%; 
+  width: 200%; 
+  height: 100%;
+  background-color: rgb(9, 33, 46); 
+  transform-origin: top left;
+  transform: skewX(-15deg); 
+  transition: height 0.5s ease; 
+}
+
+.container-diagonal:hover::before {
+  height: 0; 
+}
+ */
 /* ---------------------------------------------------------- */
 .circle {
   width: 200px;
@@ -170,10 +190,32 @@ a {
     left: 60%; /* Comenzar la división desde la mitad del contenedor */
   }
 
+  
+
  }
 
  /* `md` applies to small devices (landscape phones, less than 768px) */
- @media (max-width: 767.98px) { 
+ @media (max-width: 768px) { 
+
+  /* ANIMATION BACKGROUND BEGIN */
+  .container-diagonal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%; /* Comenzar la división desde la mitad del contenedor */
+    width: 200%; /* Ancho suficientemente grande para cubrir todo el contenedor */
+    height: 100%;
+    background-color: rgb(9, 33, 46); /* Color de la división */
+    transform-origin: top left;
+    transform: skewX(-15deg); /* Rotar el pseudo-elemento hacia la izquierda */
+    transition: height 0.5s ease; /* Transición para suavizar el cambio de altura durante 10 segundos */
+  }
+  
+  .remove-diagonal::before {
+    height: 0; /* Reduce la altura del fondo a cero al agregar la clase */
+  }
+  /* ANIMATION BACKGROUND END */
+  
   
 
   }
@@ -220,6 +262,7 @@ a {
     
   }
 
+  
  
     
 
