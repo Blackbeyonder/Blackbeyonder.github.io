@@ -1,8 +1,8 @@
 /* Aplica los estilos personalizados a todos los botones con la clase .btn-primary */
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #FB861E;
-    --bs-btn-border-color: #FB861E;
+    --bs-btn-bg: #FF9100;
+    --bs-btn-border-color: #FF9100;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #fd9941;
     --bs-btn-hover-border-color: #fd9941;
@@ -17,11 +17,11 @@
 }
 
 .btn-outline-primary {
-    --bs-btn-color: #FB861E;
-    --bs-btn-border-color: #FB861E;
+    --bs-btn-color: #FF9100;
+    --bs-btn-border-color: #FF9100;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #FB861E;
-    --bs-btn-hover-border-color: #FB861E;
+    --bs-btn-hover-bg: #FF9100;
+    --bs-btn-hover-border-color: #FF9100;
     --bs-btn-focus-shadow-rgb: 13,110,253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #0d6efd;
@@ -44,13 +44,22 @@
 
   .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: #FB861E; /* Color naranja para el texto */
+  color: #FF9100; /* Color naranja para el texto */
   text-decoration: underline; /* Subrayado para el texto */
   text-decoration-thickness: 0.2em;
 }
 
+.navbar-nav .nav-link:not(.active) {
+  color: #F5F5F5; /* Cambia el color del texto de los elementos nav-link no activados a rojo */
+}
+
+#nav-barCustom{
+z-index: 10000;
+}
+
+
 .colorTextOrange{
-    color: #FB861E;
+    color: #FF9100;
 }
 
 .colorTextGray{
@@ -70,6 +79,7 @@
   position: relative;
   height: 100vh; /* Altura del contenedor */
   overflow: hidden;
+  /* z-index: 10000; */
 }
 
 .container-diagonal::before {
@@ -90,7 +100,7 @@
   height: 200px;
   border-radius: 50%; /* Hace que el div sea un círculo */
   background-color: #f0f0f0; /* Color de fondo del círculo */
-  border: 5px solid #d80909; /* Contorno del círculo */
+  border: 11px solid #d80909; /* Contorno del círculo */
   position: absolute; /* Cambiamos a posicion absoluta */
   top: 50%; /* Lo posicionamos en el 50% desde arriba */
   left: 50%; /* Lo posicionamos en el 50% desde la izquierda */

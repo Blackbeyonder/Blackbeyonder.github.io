@@ -11,8 +11,8 @@
 </head>
 <body>
     
-      <div class="container-diagonal">
-        <div class="container-fluid"  style="position: fixed;">
+      <section class="container-diagonal" id="inicio">
+        <div class="container-fluid"  style="position: fixed;" id="nav-barCustom">
             <nav class="navbar navbar-expand-lg sticky-top navbar-brand">
                 <div class="container-fluid">
                   <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,16 +22,16 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Perfil</a>
+                        <a class="nav-link " href="#perfil">Perfil</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Experiencia</a>
+                        <a class="nav-link " href="#experiencia">Experiencia</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Contacto</a>
+                        <a class="nav-link " href="#contacto">Contacto</a>
                       </li>
                     </ul>
                   </div>
@@ -41,7 +41,8 @@
 
         
 
-        <div class="d-flex flex-column w-50 h-100 align-items-center">
+        <div class="d-flex flex-row h-100">
+          <div class="d-flex flex-column w-50 align-items-center">
             <div class="d-flex flex-column h-100 justify-content-center">
                 <div class="text-uppercase fw-bold name_size colorTextGray">Ricardo May</div>
                 <div class="colorTextOrange fw-bold text-uppercase fs-3 mb-5">Programador web</div>
@@ -58,54 +59,73 @@
                 </div>
             </div>
           </div>
-
-          <div>
-            
-            
-          </div>
-      </div>
-
+          <div class="d-flex w-50 align-items-center justify-content-center">
+            <div >
+              <div class="circle2">
+                <div id="circle" class="circle"></div>
       
+                <div class="progress-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="37 -5 120 100" width="100%" height="100%" style="overflow: visible;">
+                    <!-- Trayectoria gris base -->
+                    <path class="grey" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
+              
+                    <!-- Marcador de inicio (0%) -->
+                    <text x="35" y="90" dx="5" dy="5" font-family="Arial" font-size="12" fill="grey">0</text>
+              
+                    <!-- Trayectoria de progreso -->
+                    <path class="red" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
+              
+                    <!-- Marcador de fin (100%) -->
+                    <text x="152" y="90" dx="-5" dy="5" font-family="Arial" font-size="12" fill="grey">100</text>
 
-      <div style="margin-left: 60px;">
-        <div class="circle2">
-          <div id="circle" class="circle"></div>
+                    <text x="82" y="120" dx="-5" dy="5" font-family="Arial" font-size="10" fill="grey">Cargando...</text>
+                  </svg>
+                </div>
+              </div>
+            
+              
+            </div>
 
-          <div class="progress-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="37 -5 120 100" width="100%" height="100%" style="overflow: visible;">
-              <!-- Trayectoria gris base -->
-              <path class="grey" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
-        
-              <!-- Marcador de inicio (0%) -->
-              <text x="35" y="90" dx="5" dy="5" font-family="Arial" font-size="12" fill="grey">0</text>
-        
-              <!-- Trayectoria de progreso -->
-              <path class="red" d="M55,90 A55,55 0 1,1 140,90" style="fill:none;"/>
-        
-              <!-- Marcador de fin (100%) -->
-              <text x="152" y="90" dx="-5" dy="5" font-family="Arial" font-size="12" fill="grey">100</text>
-            </svg>
           </div>
         </div>
-      
-        
-      </div>
-      
-      
 
-     
-      
-      
-      
-      
-     
+          
+      </section>
 
       
-    <h1 class="test">
+
+      
+    <section  id="perfil" style="font-size: 50px; background-color: aqua;">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odit repudiandae error tempore laboriosam, itaque nisi, possimus incidunt voluptatum officia dicta omnis hic voluptas qui voluptate dolores animi natus? Vel?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorem optio nostrum ipsum rem magni libero ea! Porro, adipisci pariatur. Debitis provident fugiat nihil laborum dolorum magnam et sint itaque.
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, fuga magnam porro deserunt blanditiis modi molestias. Amet nemo provident quo praesentium laudantium tempora architecto ducimus eaque odit nostrum, vel deserunt.
-    </h1>
+    </section>
+
+    <section  id="formacion" style="font-size: 50px; background-color: rgb(60, 255, 0);">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odit repudiandae error tempore laboriosam, itaque nisi, possimus incidunt voluptatum officia dicta omnis hic voluptas qui voluptate dolores animi natus? Vel?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorem optio nostrum ipsum rem magni libero ea! Porro, adipisci pariatur. Debitis provident fugiat nihil laborum dolorum magnam et sint itaque.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, fuga magnam porro deserunt blanditiis modi molestias. Amet nemo provident quo praesentium laudantium tempora architecto ducimus eaque odit nostrum, vel deserunt.
+  </section>
+
+  <section  id="experiencia" style="font-size: 50px; background-color: rgb(208, 255, 0);">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odit repudiandae error tempore laboriosam, itaque nisi, possimus incidunt voluptatum officia dicta omnis hic voluptas qui voluptate dolores animi natus? Vel?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorem optio nostrum ipsum rem magni libero ea! Porro, adipisci pariatur. Debitis provident fugiat nihil laborum dolorum magnam et sint itaque.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, fuga magnam porro deserunt blanditiis modi molestias. Amet nemo provident quo praesentium laudantium tempora architecto ducimus eaque odit nostrum, vel deserunt.
+</section>
+
+<section  id="contacto" style="font-size: 50px; background-color: rgb(0, 255, 234);">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, odit repudiandae error tempore laboriosam, itaque nisi, possimus incidunt voluptatum officia dicta omnis hic voluptas qui voluptate dolores animi natus? Vel?
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorem optio nostrum ipsum rem magni libero ea! Porro, adipisci pariatur. Debitis provident fugiat nihil laborum dolorum magnam et sint itaque.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, fuga magnam porro deserunt blanditiis modi molestias. Amet nemo provident quo praesentium laudantium tempora architecto ducimus eaque odit nostrum, vel deserunt.
+</section>
+
+<div style="font-size: 50px;">
+  <FOOTER>
+    ALGO
+  </FOOTER>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum saepe nihil veniam id quae doloremque ab odio facere, ex perspiciatis veritatis incidunt quia velit quibusdam nobis dicta quis doloribus reprehenderit?
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fugit autem recusandae nihil quae, in sit aliquam necessitatibus impedit architecto ipsum nulla voluptas? Inventore, rerum porro! Quasi ipsum quis maxime?
+</div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
