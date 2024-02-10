@@ -4,7 +4,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Llamar a la función setPercentage después de que se cargue el DOM
     console.log("dom1");
-    // setPercentage(50);
+
+    /* Redirect to first div BEGIN */
+     // Obtener el primer div
+    const primerDiv = document.getElementById('inicio');
+    // Hacer scroll al primer div
+    primerDiv.scrollIntoView({ behavior: 'smooth' });
+    /* Redirect to first div END */
 
        const circle = document.getElementById('circle');
       const redPath = document.querySelector('.red');
@@ -23,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       /* -----------------CLICK IN NAV-LINK EVENT BEGIN---------------------- */
 
-      const links = document.querySelectorAll('.nav-link');
+      const links = document.querySelectorAll('.navbar-nav .nav-link');
 
         links.forEach(link => {
             link.addEventListener('click', function(event) {
@@ -97,6 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Desbloquear el desplazamiento después de un tiempo determinado (por ejemplo, 3 segundos)
       setTimeout(function() {
         document.body.classList.remove('scroll-lock');
+
+        document.querySelectorAll('a').forEach(function(link) {
+          link.style.pointerEvents = 'auto';
+        });
     }, 3000); // 3000 milisegundos = 3 segundos
 
         

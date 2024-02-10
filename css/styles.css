@@ -79,6 +79,10 @@ z-index: 10000;
   overflow: hidden;
 }
 
+.disabled {
+  display: none; /* O cualquier otro estilo para desactivar el navbar */
+}
+
 .container-diagonal {
   position: relative;
   height: 100vh; /* Altura del contenedor */
@@ -156,5 +160,8 @@ path {
   }
 }
 
+a {
+  pointer-events: none;
+}
 /* Agrega las clases .red-02, .red-03, etc., como lo hiciste en tu CSS */
 
