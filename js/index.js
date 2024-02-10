@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         links.forEach(link => {
             link.addEventListener('click', function(event) {
+              
                 // Prevenir el comportamiento predeterminado del enlace
                 event.preventDefault();
 
@@ -93,8 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
       
     /* -----------------SCROOLL EVENT END---------------------- */
 
-      
+      // Desbloquear el desplazamiento después de un tiempo determinado (por ejemplo, 3 segundos)
+      setTimeout(function() {
+        document.body.classList.remove('scroll-lock');
+    }, 3000); // 3000 milisegundos = 3 segundos
 
         
   });
-  
+
+
