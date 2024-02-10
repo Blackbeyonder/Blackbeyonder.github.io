@@ -163,5 +163,65 @@ path {
 a {
   pointer-events: none;
 }
-/* Agrega las clases .red-02, .red-03, etc., como lo hiciste en tu CSS */
 
+ /* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+  .container-diagonal::before {
+    left: 60%; /* Comenzar la división desde la mitad del contenedor */
+  }
+
+ }
+
+ /* `md` applies to small devices (landscape phones, less than 768px) */
+ @media (max-width: 767.98px) { 
+  
+
+  }
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  #nav-barCustom{
+    background-color: rgb(9, 33, 46) !important;  /* Color de la división */
+    padding: 10px;
+    }
+  #thename{
+    color: #F5F5F5;
+  }
+  .navbar-toggler{
+    border:1px #F5F5F5 solid;
+    padding: 2px;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+  }
+ }
+
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .circle2 {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+
+  .progress-wrapper {
+    height: 342px;
+    width: 308px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -83px;
+    left: -40px;
+    
+  }
+
+ 
+    
+
+  
+}
