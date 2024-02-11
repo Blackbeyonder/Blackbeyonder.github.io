@@ -36,6 +36,23 @@ body{
     --bs-gradient: none;
 }
 
+.progress {
+  --bs-progress-height: 1rem;
+  --bs-progress-font-size: 0.75rem;
+  --bs-progress-bg: #e9ecef;
+  --bs-progress-border-radius: 0.2rem;
+  --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-progress-bar-color: #fff;
+  --bs-progress-bar-bg: #FF9100;
+  --bs-progress-bar-transition: width 0.6s ease;
+  display: flex;
+  height: var(--bs-progress-height);
+  overflow: hidden;
+  font-size: var(--bs-progress-font-size);
+  background-color: var(--bs-progress-bg);
+  border-radius: var(--bs-progress-border-radius);
+}
+
 .size_button{
     padding: 10px !important;
     width: 8rem !important;
@@ -74,6 +91,10 @@ z-index: 10000;
     color: rgb(117, 117, 117);
 }
 
+.colorTextBold{
+  color:#2B2B2B
+}
+
 .backgroundBlue{
   background-color: rgb(9, 33, 46);;
 }
@@ -83,7 +104,11 @@ z-index: 10000;
 }
 
 .paddingTopContainer{
-  padding-top: 5rem;
+  padding-top: 7rem;
+}
+
+.paddingBottomContainer{
+  padding-bottom: 7rem;
 }
 
 .name_size{
@@ -130,6 +155,10 @@ z-index: 10000;
 
 .class_to_div_mobil{
   margin-top: 40vh;
+}
+
+.shadowGray{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 
@@ -253,6 +282,11 @@ a {
     margin-right: 2rem;
   
   }
+
+  .img_subject{
+    height: 11rem !important; 
+    width: 80% I !important;
+  }
   
 }
 
@@ -268,7 +302,7 @@ a {
 
   .img_subject{
     height: 5rem; 
-    /* width: 9rem; */
+    width: 85%;
   }
 
   /* ANIMATION BACKGROUND BEGIN */
@@ -312,7 +346,7 @@ a {
     border-radius: 10px;
   }
   .line_perfil{
-    width: 12rem;
+    width: 8rem;
   }
   
  }
