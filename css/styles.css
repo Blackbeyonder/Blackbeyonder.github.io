@@ -1,4 +1,7 @@
 /* Aplica los estilos personalizados a todos los botones con la clase .btn-primary */
+body{
+  background-color: #F5F5F5;
+}
 .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: #FF9100;
@@ -36,6 +39,7 @@
 .size_button{
     padding: 10px !important;
     width: 8rem !important;
+    border-radius: 12px !important;
 }
 
 .navbar-brand {
@@ -103,6 +107,13 @@ z-index: 10000;
   transition: height 0.5s ease; 
 }
 
+#toMobil{
+  display: none;
+}
+
+.class_to_div_mobil{
+  margin-top: 40vh;
+}
 
 
 /* .container-diagonal::before {
@@ -216,12 +227,10 @@ a {
   }
   /* ANIMATION BACKGROUND END */
   
-  
-
   }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
+@media (max-width: 992px) { 
   #nav-barCustom{
     background-color: rgb(9, 33, 46) !important;  /* Color de la división */
     padding: 10px;
@@ -262,7 +271,10 @@ a {
     
   }
 
-  
+  .name_size{
+    font-size: 3rem;
+
+  }
  
     
 

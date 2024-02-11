@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.querySelector('.container-diagonal');
         container.classList.add('remove-diagonal'); // Agregar la clase para iniciar la animación
     
+        ocultarEnMovil();
 
       });
 
@@ -112,7 +113,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 3000); // 3000 milisegundos = 3 segundos
 
+
         
   });
+
+        // Función para verificar si la pantalla es de un dispositivo móvil
+function esDispositivoMovil() {
+    return window.innerWidth <= 768; // Aquí puedes ajustar el ancho de la pantalla para que se adapte a tu definición de dispositivos móviles
+}
+
+// Función para ocultar el div en dispositivos móviles
+function ocultarEnMovil() {
+    const miDiv = document.getElementById('progress_bar_mobil_animation');
+    const div_toMobil = document.getElementById('toMobil');
+    if (esDispositivoMovil()) {
+        miDiv.style.display = 'none'; // Ocultar el div si es un dispositivo móvil
+        div_toMobil.style.display = 'flex'; // Ocultar el div si es un dispositivo móvil
+        const div_to_remove = document.getElementById('div_to_remove');
+        div_to_remove.classList.remove("align-items-center");
+        div_to_remove.classList.add("class_to_div_mobil");
+    }
+}
+
+
+// También puedes llamar a la función en respuesta a cambios en el tamaño de la ventana
+window.addEventListener('resize', function() {
+    ocultarEnMovil();
+});
+
+
+
+
 
 
