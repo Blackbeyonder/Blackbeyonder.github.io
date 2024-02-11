@@ -133,23 +133,6 @@ z-index: 10000;
 }
 
 
-/* .container-diagonal::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 55%; 
-  width: 200%; 
-  height: 100%;
-  background-color: rgb(9, 33, 46); 
-  transform-origin: top left;
-  transform: skewX(-15deg); 
-  transition: height 0.5s ease; 
-}
-
-.container-diagonal:hover::before {
-  height: 0; 
-}
- */
 /* ---------------------------------------------------------- */
 .circle {
   width: 200px;
@@ -223,6 +206,21 @@ a {
   width: 9rem;
 }
 
+.line_perfil{
+  height: 1.2rem;
+  background-color: #fc8f33;
+  width: 22rem;
+  position: absolute;
+  border-radius: 0.3rem;
+  top: -3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position_relative{
+  position: relative;
+}
+
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
   .circle2 {
@@ -249,18 +247,36 @@ a {
     font-size: 3rem;
 
   }
+
+  .custom_container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  
+  }
   
 }
 
  /* `md` applies to small devices (landscape phones, less than 768px) */
  @media (max-width: 768px) { 
 
+  
+  .custom_container{
+    margin-left: 5rem;
+    margin-right: 5rem;
+  
+  }
+
+  .img_subject{
+    height: 5rem; 
+    /* width: 9rem; */
+  }
+
   /* ANIMATION BACKGROUND BEGIN */
   .container-diagonal::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0%; /* Comenzar la división desde la mitad del contenedor */
+    left: -7% !important; /* Comenzar la división desde la mitad del contenedor */
     width: 200%; /* Ancho suficientemente grande para cubrir todo el contenedor */
     height: 100%;
     background-color: rgb(9, 33, 46); /* Color de la división */
@@ -274,16 +290,7 @@ a {
   }
   /* ANIMATION BACKGROUND END */
 
-  .custom_container{
-    margin-left: 5rem;
-    margin-right: 5rem;
   
-  }
-
-  .img_subject{
-    height: 5rem; 
-    /* width: 9rem; */
-  }
   
   }
 
@@ -304,6 +311,10 @@ a {
     padding-bottom: 6px;
     border-radius: 10px;
   }
+  .line_perfil{
+    width: 12rem;
+  }
+  
  }
 
  /* `xl` applies to large devices (desktops, less than 1200px) */
@@ -312,15 +323,28 @@ a {
     left: 60%; /* Comenzar la división desde la mitad del contenedor */
   }
 
+  .custom_container{
+    margin-left: 20rem;
+    margin-right: 20rem;
+  
+  }
+  
+
  }
 
  /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
  @media (max-width: 1400px) { 
+
+
   .custom_container{
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   
   }
+
+  
+
+  
 
   }
 
