@@ -10,6 +10,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/index.js"></script>
+  <script src="js/add_gallery.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 </head>
@@ -35,7 +36,7 @@
             </span>
 
           </button>
-          <a class="navbar-brand mx-auto fw-bold" id="thename">RICARDO MAY</a>
+          <a class="navbar-brand mx-auto fw-bold " id="thename">RICARDO MAY</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -598,14 +599,16 @@
             <div class="fw-bold colorTextBold">Últimos proyectos</div>
           </div>
           <div>
-            <button type="button" class="btn btn-secondary">Ver todo</button>
+            <button type="button" class="btn btn-secondary" id="agregar-elemento">Ver todo</button>
           </div>
   
         </div>
+
+
         <div class="gallery-container">
-          <div class="row">
+          <div class="row" id="gallery-row">
   
-            <div class="col-sm-4 d-flex flex-column align-items-center">
+            <div class="col-sm-4 d-flex flex-column align-items-center mb-5">
               <div class="d-flex img_gallery rounded-4" style="background-image: url('https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg'); background-position: center;">
               </div>
               <div class="fw-bold colorTextBold mt-3 text_img">
@@ -613,7 +616,7 @@
               </div>
             </div>
   
-            <div class="col-sm-4 d-flex flex-column align-items-center">
+            <div class="col-sm-4 d-flex flex-column align-items-center mb-5">
               <div class="d-flex img_gallery rounded-4" style="background-image: url('https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg'); background-position: center;">
               </div>
               <div class="fw-bold colorTextBold mt-3 text_img">
@@ -621,13 +624,14 @@
               </div>
             </div>
   
-            <div class="col-sm-4 d-flex flex-column align-items-center">
+            <div class="col-sm-4 d-flex flex-column align-items-center mb-5">
               <div class="d-flex img_gallery rounded-4" style="background-image: url('https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg'); background-position: center;">
               </div>
               <div class="fw-bold colorTextBold mt-3 text_img">
                 Nombre del proyecto
               </div>
             </div>
+            
           </div>
         </div>
         <!-- <button id="verMas">Ver más</button> -->

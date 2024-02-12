@@ -330,7 +330,13 @@ a {
 .img_gallery{
   width: 80%;
   height: 450px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 
+}
+
+.img_gallery:hover {
+  transform: scale(1.1); /* Cambia el valor para aumentar o disminuir el efecto */
 }
 
 .text_img{
