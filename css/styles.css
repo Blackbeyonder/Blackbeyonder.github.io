@@ -36,6 +36,23 @@ body{
     --bs-gradient: none;
 }
 
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgb(9, 33, 46);
+  --bs-btn-border-color: rgb(9, 33, 46);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #5c636a;
+  --bs-btn-hover-border-color: #565e64;
+  --bs-btn-focus-shadow-rgb: 130,138,145;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #565e64;
+  --bs-btn-active-border-color: #51585e;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgb(9, 33, 46);
+  --bs-btn-disabled-border-color: rgb(9, 33, 46);
+}
+
 .progress {
   --bs-progress-height: 1rem;
   --bs-progress-font-size: 0.75rem;
@@ -96,7 +113,7 @@ z-index: 10000;
 }
 
 .backgroundBlue{
-  background-color: rgb(9, 33, 46);;
+  background-color: rgb(9, 33, 46);
 }
 
 .backgroundWhite{
@@ -310,6 +327,16 @@ a {
   position: relative;
 }
 
+.img_gallery{
+  width: 80%;
+  height: 450px;
+
+}
+
+.text_img{
+  width: 80%;
+}
+
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
   .circle2 {
@@ -347,6 +374,7 @@ a {
     height: 11rem !important; 
     width: 80% I !important;
   }
+
   
 }
 
@@ -384,7 +412,15 @@ a {
   }
   /* ANIMATION BACKGROUND END */
 
+  .img_gallery{
+    width: 100% !important;
+    height: 450px;
   
+  }
+ 
+  .text_img{
+    width: 100%;
+  }
   
   }
 
@@ -437,7 +473,7 @@ a {
   }
 
   
-
+ 
   
 
   }
