@@ -161,6 +161,66 @@ z-index: 10000;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
+.line_orange1 {
+  border-left: 4px solid #FAEAD6; 
+  height: 130%;
+  margin-top: 0.8rem;
+}
+
+.line_orange2 {
+  border-left: 4px solid #FAEAD6; 
+  height: 115%;
+  /* margin-top: 0.8rem; */
+}
+
+.ball_orange {
+  background-color: #FF9100;
+  height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 10px;
+    left: -7px;
+    top: 12px;
+    position:absolute;
+}
+
+.line_gray{
+  border-left: 2px solid #757575;
+  height: 60%;
+}
+
+.horizontal-list {
+  list-style: none; /* Elimina los marcadores de lista predeterminados */
+  padding-left: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.horizontal-list li {
+  position: relative; /* Establece la posición relativa para los elementos de la lista */
+  padding-left: 7px; /* Ajusta el espacio a la izquierda para dejar espacio para la línea */
+}
+
+.horizontal-list li::before {
+  content: ''; /* Agrega contenido antes de cada elemento de la lista */
+  position: absolute; /* Establece la posición absoluta para la línea */
+  top: 50%; /* Coloca la línea en la mitad vertical del elemento de la lista */
+  left: 0; /* Coloca la línea en el borde izquierdo del elemento de la lista */
+  width: 5px; /* Ancho de la línea */
+  height: 1px; /* Grosor de la línea */
+  background-color: black; /* Color de la línea */
+  transform: translateY(-50%); /* Centra verticalmente la línea */
+}
+
+/* Estilo personalizado para el enlace */
+.custom-link {
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+  /* Agrega cualquier estilo adicional para el estado hover */
+}
+
+
+
 
 /* ---------------------------------------------------------- */
 .circle {

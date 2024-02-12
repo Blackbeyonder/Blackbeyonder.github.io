@@ -142,6 +142,28 @@ window.addEventListener('resize', function() {
 });
 
 
+/* --------------------- */
+
+// Función para redireccionar a una URL
+function redireccionar(url) {
+    window.location.href = url;
+}
+
+// Obtener todos los elementos con la clase "toPage"
+const elementos = document.querySelectorAll('.toPage');
+
+// Iterar sobre cada elemento y agregar un evento de clic
+elementos.forEach(elemento => {
+    elemento.addEventListener('click', function() {
+        // Obtener la URL específica del atributo "data-url"
+        const url = this.getAttribute('data-url');
+        // Llamar a la función de redireccionamiento con la URL específica
+        redireccionar(url);
+    });
+});
+
+/* --------------------- */
+
 
 
 
