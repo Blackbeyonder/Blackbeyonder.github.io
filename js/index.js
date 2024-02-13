@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         /* -----------------CLICK IN NAV-LINK EVENT END---------------------- */
 
+        
 
       // Desbloquear el desplazamiento después de un tiempo determinado (por ejemplo, 3 segundos)
       setTimeout(function() {
