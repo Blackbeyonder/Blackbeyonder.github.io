@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const container = document.querySelector('.container-diagonal');
         container.classList.add('remove-diagonal'); // Agregar la clase para iniciar la animación
+
+        var btn1=document.querySelector('.btn-outline-primary').removeAttribute('disabled');
+        var btn2=document.querySelector('.btn-primary').removeAttribute('disabled');
     
         ocultarEnMovil();
 
