@@ -243,15 +243,6 @@ z-index: 10000;
   /* Agrega cualquier estilo adicional para el estado hover */
 }
 
-.animateClass {
-  opacity: 0;
-  transition: opacity 0.5s ease; /* Animación de transición */
-}
-
-.animateClass.show {
-  opacity: 1;
-}
-
 .owl-carousel .item img {
   border-radius: 0.5rem;
   /* height: 550px; */

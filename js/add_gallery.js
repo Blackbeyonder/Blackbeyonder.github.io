@@ -41,45 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-// Obtener todas las secciones que deben animarse
-const seccionesAnimadas = document.querySelectorAll('.animateClass');
 
-// Objeto para almacenar el estado de la animación de cada sección
-const estadoAnimacion = {};
-
-// Controlador de eventos de desplazamiento
-function verificarAnimaciones() {
-    seccionesAnimadas.forEach(seccion => {
-        // Obtener la posición de la sección en relación con la ventana
-        const rect = seccion.getBoundingClientRect();
-
-        // Verificar si la sección está completamente visible en la ventana gráfica
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            // Verificar si la sección ya ha sido animada o si los datos ya se han cargado
-            if (!estadoAnimacion[seccion.id]) {
-                // Cargar datos y aplicar animación solo si aún no se ha hecho
-                cargarDatos(seccion);
-                // Marcar la animación como activada para esta sección
-                estadoAnimacion[seccion.id] = true;
-            }
-        } else {
-            // Restablecer el estado si la sección no es visible
-            estadoAnimacion[seccion.id] = false;
-        }
-    });
-}
-
-document.addEventListener('scroll', verificarAnimaciones);
-document.addEventListener('touchmove', verificarAnimaciones);
-
-function cargarDatos(seccion) {
-    // Simulación de carga de datos
-    // Aquí puedes hacer una solicitud AJAX para cargar los datos de la sección
-
-    // Aplicar animación con animate.css
-    seccion.classList.add('animate__animated', 'animate__fadeInUp');
-    // Puedes agregar más clases de animación según tus necesidades
-}
 
 
 });
