@@ -252,7 +252,10 @@ z-index: 10000;
   opacity: 1;
 }
 
-
+.owl-carousel .item img {
+  border-radius: 0.5rem;
+  /* height: 550px; */
+}
 
 
 
@@ -350,6 +353,14 @@ a {
   height: 450px;
   overflow: hidden;
   transition: transform 0.3s ease;
+
+}
+
+.img_gallery2{
+  /* width: 80%; */
+  height: 520px;
+  /* overflow: hidden; */
+  /* transition: transform 0.3s ease; */
 
 }
 
