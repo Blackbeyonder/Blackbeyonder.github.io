@@ -70,6 +70,11 @@ body{
   border-radius: var(--bs-progress-border-radius);
 }
 
+.progress-bar {
+  transition: width 2s ease-in-out; /* Transición suave de la anchura */
+}
+
+
 .size_button{
     padding: 10px !important;
     width: 8rem !important;
@@ -235,6 +240,17 @@ z-index: 10000;
   text-decoration: underline; /* Subrayado al pasar el ratón */
   /* Agrega cualquier estilo adicional para el estado hover */
 }
+
+.animateClass {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Animación de transición */
+}
+
+.animateClass.show {
+  opacity: 1;
+}
+
+
 
 
 
