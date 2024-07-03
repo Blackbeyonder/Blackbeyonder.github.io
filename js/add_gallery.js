@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Datos de los nuevos elementos (array de objetos)
         const nuevosElementosData = [
+            { imageUrl: 'assets/101obex.jpg', nombreProyecto: '101obex', page: "https://www.101obex.com/developers" },
             { imageUrl: 'assets/arkethink.jpg', nombreProyecto: 'Arkethink', page: "https://arkethink.mx//" },
             { imageUrl: 'assets/legal.jpg', nombreProyecto: 'Legal-leader', page: "https://legal-leader.com/" },
             // { imageUrl: 'url_imagen_3.jpg', nombreProyecto: 'Nombre del proyecto 3' }
