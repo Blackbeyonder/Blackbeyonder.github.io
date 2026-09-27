@@ -1,4 +1,38 @@
+// Carga diferida de imágenes de fondo (elementos con clase "lazy-bg" y atributo "data-bg").
+// Se expone en window para que otros scripts (galería dinámica, carrusel) puedan
+// registrar elementos creados después de la carga inicial.
+window.lazyLoadImages = function (root) {
+    root = root || document;
+    const targets = root.querySelectorAll('.lazy-bg[data-bg]:not(.bg-loaded)');
+
+    if (!('IntersectionObserver' in window)) {
+        targets.forEach(function (el) {
+            el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+            el.classList.add('bg-loaded');
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+                el.classList.add('bg-loaded');
+                obs.unobserve(el);
+            }
+        });
+    }, { rootMargin: '200px' });
+
+    targets.forEach(function (el) {
+        observer.observe(el);
+    });
+};
+
 document.addEventListener('DOMContentLoaded', function () {
+    // Cargar de forma diferida las imágenes de fondo presentes al cargar la página
+    window.lazyLoadImages();
+
     /* -----------------SCROOLL EVENT BEGIN---------------------- */
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');

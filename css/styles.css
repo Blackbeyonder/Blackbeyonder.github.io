@@ -344,6 +344,9 @@ a {
   height: 450px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  background-color: #e9e9e9; /* placeholder visible mientras carga la imagen (lazy-load) */
 
 }
 
@@ -352,11 +355,36 @@ a {
   height: 520px;
   /* overflow: hidden; */
   /* transition: transform 0.3s ease; */
+  position: relative;
+  cursor: pointer;
+  background-color: #e9e9e9;
 
 }
 
 .img_gallery:hover {
   transform: scale(1.1); /* Cambia el valor para aumentar o disminuir el efecto */
+}
+
+.img_gallery::after,
+.img_gallery2::after {
+  content: "Ver proyecto \2197";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  background-color: rgba(9, 33, 46, 0.55);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.img_gallery:hover::after,
+.img_gallery2:hover::after {
+  opacity: 1;
 }
 
 .text_img{
