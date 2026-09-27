@@ -2,8 +2,12 @@
 
 // Llamar a la función con el porcentaje deseado (por ejemplo, 50 para el 50%)
 document.addEventListener('DOMContentLoaded', function() {
-    // Llamar a la función setPercentage después de que se cargue el DOM
-    console.log("dom1");
+    // Mostrar el año actual en el aviso de derechos reservados
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear() + ' Todos los derechos reservados';
+    }
+
     /* Redirect to first div BEGIN */
      // Obtener el primer div
     const primerDiv = document.getElementById('inicio');
@@ -17,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Selecciona el elemento <text> por su atributo 'x'
       const loadingText = document.querySelector('text[x="82"]');
       
-      redPath.addEventListener('animationend', () => {
-        console.log("animado");
+      let botonesHabilitados = false;
+      function habilitarBotonesHero() {
+        if (botonesHabilitados) return;
+        botonesHabilitados = true;
+
         circle.style.border = '11px solid #2EB51A'; // Cambiar el color del círculo al rojo
         // Modifica el texto del elemento
         loadingText.setAttribute('x', '92');
@@ -27,12 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.querySelector('.container-diagonal');
         container.classList.add('remove-diagonal'); // Agregar la clase para iniciar la animación
 
-        var btn1=document.querySelector('.btn-outline-primary').removeAttribute('disabled');
-        var btn2=document.querySelector('.btn-primary').removeAttribute('disabled');
-    
-        ocultarEnMovil();
+        document.querySelector('.btn-outline-primary')?.removeAttribute('disabled');
+        document.querySelector('.btn-primary')?.removeAttribute('disabled');
 
-      });
+        ocultarEnMovil();
+      }
+
+      redPath.addEventListener('animationend', habilitarBotonesHero);
+
+      // Salvaguarda: si la animación no se dispara (ej. navegador no soportado), habilitar igual los botones
+      setTimeout(habilitarBotonesHero, 2500);
 
       /* -----------------CLICK IN NAV-LINK EVENT BEGIN---------------------- */
 
@@ -101,31 +112,6 @@ function ocultarEnMovil() {
 window.addEventListener('resize', function() {
     ocultarEnMovil();
 });
-
-
-/* --------------------- */
-
-// Función para redireccionar a una URL
-function redireccionar(url) {
-    window.location.href = url;
-}
-
-// Obtener todos los elementos con la clase "toPage"
-const elementos = document.querySelectorAll('.toPage');
-
-// Iterar sobre cada elemento y agregar un evento de clic
-elementos.forEach(elemento => {
-    elemento.addEventListener('click', function() {
-        // Obtener la URL específica del atributo "data-url"
-        const url = this.getAttribute('data-url');
-        // Llamar a la función de redireccionamiento con la URL específica
-        redireccionar(url);
-    });
-});
-
-/* --------------------- */
-
-
 
 
 
